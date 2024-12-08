@@ -34,3 +34,41 @@
         </ul>
     </nav>
 </header>
+<body class="bg-gray-100">
+    <main class="flex items-center justify-center h-screen">
+        <div class="flex flex-col w-[800px] h-[400px] border-black border-[2px] bg-white rounded-[40px] shadow-lg">
+            <h1 class="text-[30px] p-10 text-center font-bold">Conversor de Moedas</h1>
+            
+            <div class="flex flex-col items-center gap-6 px-10">
+                <!-- Campo para Dólar -->
+                <div class="flex items-center w-full">
+                    <label for="dolar" class="w-[100px] text-lg font-medium">Dólar:</label>
+                    <input 
+                        id="dolar" 
+                        type="number" 
+                        step="0.01" 
+                        class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        placeholder="Insira o valor em Dólar"
+                        oninput="convertToReal()"
+                    >
+                </div>
+  
+                <!-- Campo para Real -->
+                <div class="flex items-center w-full">
+                    <label for="real" class="w-[100px] text-lg font-medium">Real:</label>
+                    <input 
+                        id="real" 
+                        type="number" 
+                        step="0.01" 
+                        class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                        placeholder="Insira o valor em Real"
+                        oninput="convertToDolar()"
+                    >
+                </div>
+  
+                <!-- Espaço para mensagem -->
+                <div id="resultado" class="mt-6 text-lg font-medium text-gray-700"></div>
+            </div>
+        </div>
+    </main>
+ 
