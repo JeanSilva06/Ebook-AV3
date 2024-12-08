@@ -71,4 +71,34 @@
             </div>
         </div>
     </main>
- 
+    <script>
+        // Taxa de câmbio fictícia
+        const exchangeRate = 6.04;
+  
+        // Função para converter de Dólar para Real
+        function convertToReal() {
+            const dolarInput = document.getElementById('dolar');
+            const realInput = document.getElementById('real');
+            const dolarValue = parseFloat(dolarInput.value);
+  
+            if (!isNaN(dolarValue)) {
+                realInput.value = (dolarValue * exchangeRate).toFixed(2);
+            } else {
+                realInput.value = '';
+            }
+        }
+  
+        // Função para converter de Real para Dólar
+        function convertToDolar() {
+            const dolarInput = document.getElementById('dolar');
+            const realInput = document.getElementById('real');
+            const realValue = parseFloat(realInput.value);
+  
+            if (!isNaN(realValue)) {
+                dolarInput.value = (realValue / exchangeRate).toFixed(2);
+            } else {
+                dolarInput.value = '';
+            }
+        }
+    </script>
+  
